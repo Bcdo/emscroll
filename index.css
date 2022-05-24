@@ -1,0 +1,26 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section:nth-child(2) {
+  background: #0e6fba;
+}
+section:nth-child(3) {
+  background: #34abd3;
+}
+
+.image img {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
