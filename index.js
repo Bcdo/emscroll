@@ -9,8 +9,10 @@ const inviewCallback = (entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       entry.target.classList.add("inview");
+      console.log("inview");
     } else {
       entry.target.classList.remove("inview");
+      console.log("not inview");
     }
   });
 };
