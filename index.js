@@ -1,24 +1,38 @@
-let observedElements = document.querySelectorAll(".inview-element");
+let observedElement;
+let backgroundImages;
+let showBoolean = true;
 
-const options = {
-  threshold: 0.5,
-  rootMargin: "0px",
-};
+window.addEventListener(
+  "load",
+  (e) => {
+    observedElement = document.querySelector(".section-two");
+    backgroundImages = document.querySelectorAll(".image");
+    createObserver();
+  },
+  false
+);
 
-const inviewCallback = (entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("inview");
-      console.log("inview");
-    } else {
-      entry.target.classList.remove("inview");
-      console.log("not inview");
-    }
-  });
-};
+function createObserver() {
+  let observer;
+  let options = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.5,
+  };
+  observer = new IntersectionObserver(handleIntersect, options);
+  observer.observe(observedElement);
+}
 
-let observer = new IntersectionObserver(inviewCallback, options);
-
-observedElements.forEach((element) => {
-  observer.observe(element);
-});
+function handleIntersect() {
+  showBoolean = !showBoolean;
+  if (showBoolean) {
+    backgroundImages.forEach((image) => {
+      image.classList.add("fade-in");
+    });
+  }
+  if (!showBoolean) {
+    backgroundImages.forEach((image) => {
+      image.classList.remove("fade-in");
+    });
+  }
+}
