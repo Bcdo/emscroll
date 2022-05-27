@@ -23,8 +23,7 @@ section div {
   color: #2b2b2b;
 }
 
-.image img {
-  width: 100vw;
+.image img {  width: 100vw;
   height: 100vh;
   object-fit: cover;
   display: block;
@@ -33,7 +32,7 @@ section div {
 .image {
   opacity: 0;
   transition: all 0.5s ease;
-  position: absolute;
+  position: fixed;
   display: block;
   top: 0;
   left: 0;
