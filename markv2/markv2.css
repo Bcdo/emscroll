@@ -1,85 +1,88 @@
-section{
-    position: relative;
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: sans-serif;
+  color: white;
+  font-weight: 800;
 }
 
-
-.background{
-    opacity: 0;
-    transition: all 0.5s ease;
-    position: fixed;
-    display: block;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    object-fit: cover;
+section {
+  position: relative;
 }
 
-.last_background{
-    position: fixed;
-    display: block;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -2;
-    object-fit: cover;
+.background {
+  opacity: 0;
+  transition: all 0.5s ease;
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  object-fit: cover;
 }
 
-section .show-background{
-    opacity: 1 ;
-    transition: all 0.5s ease;
+.last_background {
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  object-fit: cover;
 }
 
-section .stopPos{
-
+section .show-background {
+  opacity: 1;
+  transition: all 0.5s ease;
 }
 
-.txt_wrapper{
-    text-align: center;
-    padding-top: 20vh;
-    padding-bottom: 20vh;
-    margin-top: 10vh;
-    margin-bottom: 10vh;
-    transition: all 0.5s ease;
-    /* background-color: aqua; */
+.txt_wrapper {
+  text-align: center;
+  padding-top: 20vh;
+  padding-bottom: 20vh;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+  transition: all 0.5s ease;
+  /* background-color: aqua; */
 }
 
-section div:first-of-type{
-    margin-top: 50vh;
+section div:first-of-type {
+  margin-top: 50vh;
 }
 
-p{
-    background-color: pink;
-    width: 50%;
-    margin: 0px auto;
-    padding: 30px;
-    transition: all 0.5s ease;
-
+p {
+  background-color: pink;
+  width: 50%;
+  margin: 0px auto;
+  padding: 30px;
+  transition: all 0.5s ease;
 }
 
-.hideTxt{
-    opacity: 0;
+.hideTxt {
+  opacity: 0;
 }
 
-.second-paragraph p{
-    margin: 200px auto 200px;
+.second-paragraph p {
+  margin: 200px auto 200px;
 }
 
-.second-paragraph p:first-child{
-    margin: 0px auto 200px;
+.second-paragraph p:first-child {
+  margin: 0px auto 200px;
 }
 
-.second-paragraph p:last-child{
-    margin: 200px auto 0px;
+.second-paragraph p:last-child {
+  margin: 200px auto 0px;
 }
 
-.last-paragraph p:first-child{
-    margin: 0 auto 100px;
+.last-paragraph p:first-child {
+  margin: 0 auto 100px;
 }
 
-.last_div_wrapper{
-    background-color: white;
-    width: 100vw;
+.last_div_wrapper {
+  background-color: white;
+  width: 100%;
 }
