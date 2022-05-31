@@ -1,3 +1,8 @@
+section{
+    position: relative;
+}
+
+
 .background{
     opacity: 0;
     transition: all 0.5s ease;
@@ -11,11 +16,24 @@
     object-fit: cover;
 }
 
-
+.last_background{
+    position: fixed;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    object-fit: cover;
+}
 
 section .show-background{
     opacity: 1 ;
     transition: all 0.5s ease;
+}
+
+section .stopPos{
+
 }
 
 .txt_wrapper{
@@ -46,5 +64,22 @@ p{
 }
 
 .second-paragraph p{
-    margin: 250px auto 250px;
+    margin: 200px auto 200px;
+}
+
+.second-paragraph p:first-child{
+    margin: 0px auto 200px;
+}
+
+.second-paragraph p:last-child{
+    margin: 200px auto 0px;
+}
+
+.last-paragraph p:first-child{
+    margin: 0 auto 100px;
+}
+
+.last_div_wrapper{
+    background-color: white;
+    width: 100vw;
 }
